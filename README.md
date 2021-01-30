@@ -1,2 +1,2 @@
 # Ansible-stuff
-Dynamic Inventory setup files +
+Dynamic Inventory setup files for EC2 +
