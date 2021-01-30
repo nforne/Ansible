@@ -1,0 +1,23 @@
+#!/bin/bash
+
+yum install java-1.8* -y
+yum -y install wget
+wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+yum -y install jenkins
+systemctl start jenkins
+systemctl enable jenkins
+sudo systemctl status jenkins
+sudo yum install git -y
+sudo yum update -y
+
+sudo cat /etc/os-release
+sudo yum install https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm -y
+sudo ls /etc/yum.repos.d
+sudo yum repolist
+sudo amazon-linux-extras install epel -y
+sudo yum install mysql-community-server -y
+sudo yum install mysql
+sudo systemctl start --now mysqld
+sudo systemctl enable --now mysqld
+sudo systemctl status mysqld
